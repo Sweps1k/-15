@@ -6,22 +6,25 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #0c1922;
+    background-color: #ffffff;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    position: relative;
 }
 
-.spells {
-    background: linear-gradient(rgba(12, 25, 34, 0.5), rgba(12, 25, 34, 0.6)), url('123.jpg') no-repeat center center/cover;
+.spells{
+    background: linear-gradient(rgba(12, 25, 34, 0.5), rgba(12, 25, 34, 0.6)), 
+                url('95e042cc7813a3481b3f55e0aa1587f60d1364ba (1).png') no-repeat center center/cover;
     min-height: 100vh;
     padding: 60px 0;
     display: flex;
     align-items: center;
 }
+
 .spells__title {
     text-align: center;
     color: #ffffff;
@@ -55,17 +58,9 @@ body {
 }
 
 .spell-card__icon {
-    margin-bottom: 25px;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.fallback-icon {
     font-size: 28px;
     color: #2c3e50;
+    margin-bottom: 25px;
 }
 
 .spell-card__text {
@@ -75,9 +70,113 @@ body {
     font-weight: 500;
 }
 
+.quote-section {
+    background-color: #ffffff;
+    color: #162a35;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.quote-section__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.section-quote {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.5;
+    max-width: 850px;
+    letter-spacing: 0.5px;
+}
+
+.section-quote__author {
+    font-size: 15px;
+    font-weight: 500;
+    color: #555555;
+}
+
+.hp-badge img {
+    max-width: 80px;
+    height: auto;
+    display: block;
+    margin: 10px auto 0;
+}
+
+.footer {
+    background: linear-gradient(rgba(22, 42, 53, 0.85), rgba(22, 42, 53, 0.85)), 
+                url('hero.jpg') no-repeat center bottom/cover;
+    padding: 40px 0;
+    color: #ffffff;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__logo {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-right: 2px solid rgba(255, 255, 255, 0.3);
+    padding-right: 40px;
+}
+
+.footer__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 14px;
+}
+
+.contact-row {
+    display: flex;
+    align-items: center;
+}
+
+.contact-label {
+    min-width: 140px;
+    font-weight: 500;
+}
+
+.contact-dots {
+    color: rgba(255, 255, 255, 0.3);
+    margin: 0 15px;
+    letter-spacing: 2px;
+}
+
+.contact-value {
+    font-weight: 400;
+    color: #cbd5e1;
+}
+
 @media (max-width: 992px) {
     .spells__grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .footer__container {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+    .footer__logo {
+        border-right: none;
+        padding-right: 0;
+    }
+    .contact-dots {
+        display: none;
+    }
+    .contact-row {
+        flex-direction: column;
+        gap: 4px;
     }
 }
 
@@ -87,5 +186,8 @@ body {
     }
     .spells__title {
         font-size: 26px;
+    }
+    .section-quote {
+        font-size: 18px;
     }
 }
